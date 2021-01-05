@@ -21,7 +21,7 @@ SRC_URI = "https://github.com/google/protobuf/archive/v2.6.1.tar.gz;downloadfile
 COMPATIBLE_HOST = "(x86_64|arm|aarch64).*-linux"
 
 EXTRA_OECONF += " --with-protoc=${STAGING_BINDIR_NATIVE}/protoc"
-inherit autotools setuptools ptest
+inherit autotools setuptools3 ptest
 
 DEPENDS += "protobuf-native"
 
